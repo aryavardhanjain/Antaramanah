@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarmanah</title>
+    <link rel="stylesheet" href="{% static 'styles1.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.png' %}">
+</head>
+
+<body>
+    <div id="main">
+            <div id="nav">
+                <div id="nav-left">
+                    <img href="" src="{% static 'logo.png' %}" alt="">
+                </div>
+                <div id="nav-middle">
+                    <span class="home">home</span>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="#">about<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="">Our Team</a>
+                            <a href="">Mission & Vision</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="">services<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="">Children</a>
+                            <a href="">Adults</a>
+                            <a href="#">Family</a>
+                            <a href="#">Couples</a>
+                            <a href="#">Students</a>
+                            <a href="#">Schools</a>
+                            <a href="#">Organizations</a>
+                        </div>
+                    </div>
+                    <a href="">contact</a>
+                    <a href="">FAQ</a>
+                </div>
+                <div id="nav-right">
+                    <button class="shadow__btn-1" style="cursor: pointer;">
+                        Register
+                    </button>
+                    <button class="shadow__btn-1" id="whatsappButton" style="cursor: pointer;" target="__blank">
+                        Login
+                    </button>
+                </div>
+            </div>
+        <div id="page-1">
+            <div class="p1-sections">
+                <div id="p1-left">
+                    <h2 class="Welcome">Welcome to <span class="amhs">AMHS</span> !</h2>
+                    <p>Thank you for showing the courage to take a step towards yourself. 
+                        Our team is here with you to help you explore your journey towards a better state 
+                        of mental health. <br><br>
+                        Would you like to know more about us?</p>
+                        <div class="button-group">
+                            <button class="shadow__btn" style="cursor: pointer;">
+                                Yes, i'd like to know more!
+                            </button>
+                            <button class="shadow__btn" id="whatsappButton" style="cursor: pointer;" target="__blank">
+                                Connect with a therapist
+                            </button>
+                        </div>
+                </div>
+                <div class="p1-right">
+                    <div class="phone-container">
+                        <img src="{% static 'counselling.jpg' %}" alt="image" style="height: 360px; width: 230px; margin-left: 0px;">
+                        <img src="{% static '1976104.svg' %}" alt="svg" style="height: 600px; position: absolute; z-index: -1;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
