@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antarmanah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+
+<body style="background-image: url({% static 'images/background5.jpg' %}); background-repeat: no-repeat; background-size: cover;">
+    <div id="main">
+            <div id="nav">
+                <div id="nav-left">
+                  <a href="{% url 'home' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="">
+                  </a>
+                </div>
+                <div id="nav-middle">
+                    {% if current_page == 'home' %}
+                      <span class="home">home</span>
+                    {% else %}
+                      <a href="{% url 'home' %}">home</a>
+                    {% endif %}
+                    <div class="dropdown">
+                        <a class="dropbtn" href="#">about<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                          {% if current_page == 'founders' %}
+                            <span class="home">Our Founders</span>
+                          {% else %}
+                            <a href="{% url 'our_founders' %}">Our Founders</a>
+                          {% endif %}
+                          {% if current_page == 'mission_vision' %}
+                            <span class="home">Mission & Vision</span>
+                          {% else %}
+                            <a href="{% url 'mission_vision' %}">Mission & Vision</a>
+                          {% endif %}
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="">services<i class="ri-arrow-down-s-line"></i></a>
+                        <div class="dropdown-content">
+                            <a href="">Children</a>
+                            <a href="#">Adolescents</a>
+                            <a href="">Adults</a>
+                            <a href="">Senior Citizens</a>
+                            <a href="#">Family</a>
+                            <a href="#">Couples</a>
+                            <a href="">Psychiatrist Consulation</a>
+                            <a href="#">Schools</a>
+                            <a href="#">Organizations</a>
+                        </div>
+                    </div>
+                    {% if current_page == 'contact' %}
+                      <span class="home">Contact</span>
+                    {% else %}
+                      <a href="{% url 'contact' %}">contact</a>
+                    {% endif %}
+                    {% if current_page == 'faq' %}
+                      <span class="home">FAQ</span>
+                    {% else %}
+                      <a href="{% url 'faq' %}">FAQ</a>
+                    {% endif %}
+                </div>
+                <div id="nav-right">
+                    <button class="shadow__btn-1" style="cursor: pointer;">
+                        Register
+                    </button>
+                    <button class="shadow__btn-1" id="whatsappButton" style="cursor: pointer;" target="__blank">
+                        Login
+                    </button>
+                </div>
+            </div>
+
+            {% block body %}
+
+            {% endblock %}
+
+            <footer class="footer">
+                <div class="footer__addr">
+                  <img src="{% static 'images/logo.png' %}" alt="logo" style="height: 3vw; margin-left: 1.1em; margin-bottom: 1em;">
+                      
+                  <h2>Want to speak to us?</h2>
+                    <div class="btn-container">
+                      <a class="footer__btn" href="mailto:antarmanmhs@gmail.com">Email Us</a>
+                      <a class="footer__btn" href="https://api.whatsapp.com/send?phone=918979096954&text=Hi, I'd like to know more about taking a consultation." target="_blank">Chat &nbsp;<img src="{% static 'images/whatsapp.png' %}" alt="icon" style="height: 1.3em;"></a>
+                    </div>    
+                  </address>
+                </div>
+                
+                <ul class="footer__nav">
+                  <li class="nav__item">
+                    <h2 class="nav__title">Consulation Services for:</h2>
+              
+                    <ul class="nav__ul">
+                      <li>
+                        <a href="#">Children</a>
+                      </li>
+              
+                      <li>
+                        <a href="#">Adolescents</a>
+                      </li>
+                          
+                      <li>
+                        <a href="#">Adults</a>
+                      </li>
+                      <li>
+                        <a href="#">Senior Citizens</a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li class="nav__item nav__item--extra">
+                    <br>
+                    
+                    <ul class="nav__ul nav__ul--extra">
+                      <li>
+                        <a href="#">Couples Therapy</a>
+                      </li>
+                      
+                      <li>
+                        <a href="#">Family Therapy</a>
+                      </li>
+                      
+                      <li>
+                        <a href="#">Psychiatrist Consulation</a>
+                      </li>
+                      
+                      <li>
+                        <a href="#">Schools</a>
+                      </li>
+                      
+                      <li>
+                        <a href="#">Organizations</a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li class="nav__item">
+                    
+                    <ul class="nav__ul">
+                      <li>
+                        <br>
+                        <button class="shadow__btn-1" style="cursor: pointer;" target="__blank">
+                            Blog
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <div class="legal">
+                  <p>&copy; 2023 All rights reserved.</p>
+                </div>
+              </footer>
+              <script src="{% static 'js/main.js' %}"></script>
+            </body>
+            </html>
+    

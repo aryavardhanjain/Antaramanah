@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+<div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fa-solid fa-phone"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 85859 76967</div>
+        </div>
+        <div class="phone details">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div class="topic">Whatsapp</div>
+          <div class="text-one">+91 89790 96954</div>
+        </div>
+        <div class="email details">
+          <i class="fa-solid fa-envelope"></i>          
+          <div class="topic">Email</div>
+          <div class="text-one">megha.jain2202@gmail.com</div>
+          <div class="text-two">antarmanmhs@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>
+          If you have any issue or quries related to this
+          website, you can send us message. It's our pleasure to
+          help you.
+        </p>
+        <form  method="POST">
+          {% csrf_token %}
+          <div class="input-box">
+            <input type="text" id="name" name="name" placeholder="Enter your name"/>
+          </div>
+          <div class="input-box">
+            <input type="email" id="email" name="email" placeholder="Enter your email"/>
+          </div>
+
+          <div class="input-box message-box">
+              <textarea type="text" id="content" name="content" placeholder="Write your message" rows="5" cols="30" minlength="5" maxlength=""></textarea>
+          </div>
+            <button class="shadow__btn" type="submit" >Send Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

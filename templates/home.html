@@ -1,59 +1,6 @@
+{% extends 'base.html' %}
+{% block body %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antarmanah</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-
-<body style="background-image: url({% static 'images/background5.jpg' %}); background-repeat: no-repeat; background-size: cover;">
-    <div id="main">
-            <div id="nav">
-                <div id="nav-left">
-                    <img href="" src="{% static 'images/logo.png' %}" alt="">
-                </div>
-                <div id="nav-middle">
-                    <span class="home">home</span>
-                    <div class="dropdown">
-                        <a class="dropbtn" href="#">about<i class="ri-arrow-down-s-line"></i></a>
-                        <div class="dropdown-content">
-                            <a href="">Our Team</a>
-                            <a href="">Mission & Vision</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a class="dropbtn" href="">services<i class="ri-arrow-down-s-line"></i></a>
-                        <div class="dropdown-content">
-                            <a href="">Children</a>
-                            <a href="">Adults</a>
-                            <a href="#">Family</a>
-                            <a href="#">Couples</a>
-                            <a href="#">Students</a>
-                            <a href="#">Schools</a>
-                            <a href="#">Organizations</a>
-                        </div>
-                    </div>
-                    <a href="">contact</a>
-                    <a href="">FAQ</a>
-                </div>
-                <div id="nav-right">
-                    <button class="shadow__btn-1" style="cursor: pointer;">
-                        Register
-                    </button>
-                    <button class="shadow__btn-1" id="whatsappButton" style="cursor: pointer;" target="__blank">
-                        Login
-                    </button>
-                </div>
-            </div>
         <div id="page-1">
             <div class="p1-sections">
                 <div id="p1-left">
@@ -66,7 +13,7 @@
                             <button class="shadow__btn" style="cursor: pointer;">
                                 Yes, i'd like to know more!
                             </button>
-                            <button class="shadow__btn" id="whatsappButton" style="cursor: pointer;" target="__blank">
+                            <button class="shadow__btn" href="https://api.whatsapp.com/send?phone=918979096954&text=Hi, I'd like to know more about taking a consultation." style="cursor: pointer;" target="__blank">
                                 Connect with a therapist
                             </button>
                         </div>
@@ -106,45 +53,136 @@
                 <input type="radio" name="toggle" id="btn-1" checked>
                 <input type="radio" name="toggle" id="btn-2">
                 <input type="radio" name="toggle" id="btn-3">
+                <input type="radio" name="toggle" id="btn-4">
+                <input type="radio" name="toggle" id="btn-5">
+                <input type="radio" name="toggle" id="btn-6">
+                <input type="radio" name="toggle" id="btn-7">
               
                 <div class="slider-controls">
                   <label for="btn-1"></label>
                   <label for="btn-2"></label>
                   <label for="btn-3"></label>
+                  <label for="btn-4"></label>
+                  <label for="btn-5"></label>
+                  <label for="btn-6"></label>
+                  <label for="btn-7"></label>
                 </div>
               
                 <ul class="slides">
                   <li class="slide">
                     <div class="slide-content">
-                      <h2 class="slide-title">Slide #1</h2>
-                      <p class="slide-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dignissimos commodi eos totam perferendis possimus dolorem, deleniti vitae harum? Enim.</p>
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Sushant</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></h2>
+                      </div>
+                      <p class="slide-text">My sessions have been fulfilling, I feel safe to discuss different aspects of my life and inner thoughts without worrying about judgement. My experience of the therapist has attentive, present and kind. although I’m willing to make accommodations or adjustments to ensure we both get the space to address and assess. they also repeat what I said and highlight with examples, which further reassures me that I’m not singular in my struggles, even if the situation is unique to me. Them being on the ND spectrum makes me feel extremely safe to speak about the big and small ways my neurodivergence impacts my life as one big area of focus.</p>
                     </div>
                     <p class="slide-image">
-                      <img src="https://placeimg.com/320/240/tech" alt="stuff" width="320" height="240">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
                     </p>
                   </li>
                   <li class="slide">
                     <div class="slide-content">
-                      <h2 class="slide-title">Slide #2</h2>
-                      <p class="slide-text">Nisi ratione magni ea quis animi incidunt velit voluptate dolorem enim possimus, nam provident excepturi ipsam nihil molestiae minus delectus!</p>
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Naina</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span></h2>
+                      </div>
+                      <p class="slide-text">Pretty good, I feel at ease and trying to understand how to manage my feelings. <br>Overall the process has been important for my personal growth</p>
                     </div>
                     <p class="slide-image">
-                      <img src="https://placeimg.com/320/240/animals" alt="stuff" width="320" height="240">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
                     </p>
                   </li>
                   <li class="slide">
                     <div class="slide-content">
-                      <h2 class="slide-title">Slide #3</h2>
-                      <p class="slide-text">Quisquam quod ut quasi, vero obcaecati laudantium asperiores corporis ad atque. Expedita fugit dicta maxime vel doloribus sequi, facilis dignissimos.</p>
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Dhairya</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span></h2>
+                      </div>
+                      <p class="slide-text">It was good, but expecting more in-depth communication. <br>Their approach is very professional and proactive.</p>
                     </div>
                     <p class="slide-image">
-                      <img src="https://placeimg.com/320/240/any" alt="stuff" width="320" height="240">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-content">
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Ayush</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></h2>
+                      </div>
+                      <p class="slide-text">I was very relieved and happy. <br>Till now everything is good</p>
+                    </div>
+                    <p class="slide-image">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-content">
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Khusbu</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></h2>
+                      </div>
+                      <p class="slide-text">i felt that i was patiently heard and understood. <br>It was a great experience with Dr. Gill.</p>
+                    </div>
+                    <p class="slide-image">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-content">
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Chaitra</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span></h2>
+                      </div>
+                      <p class="slide-text">Very good, Megha is an amazing therapist and makes me feel heard and has given me some very meaningful advice which I think will help me get on the right track.</p>
+                    </div>
+                    <p class="slide-image">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
+                    </p>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-content">
+                      <div class="flex" style="display: flex; justify-content: space-between;">
+                        <h2 class="slide-title">Gulfaraz</h2>
+                        <h2 class="slide-title"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span></h2>
+                      </div>
+                      <p class="slide-text">My experience was good with ma'am. <br>She is an excellent therapist. <br>She gave me a new direction to live life.</p>
+                    </div>
+                    <p class="slide-image">
+                      <img src="{% static 'images/profile.png' %}" alt="stuff" width="200" height="240" style="margin-left: 50px; margin-top: 10px;">
                     </p>
                   </li>
                 </ul>
               </div>
         </div>
-
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
-</html>
+        
+{% endblock %}
