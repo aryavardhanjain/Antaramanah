@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 
@@ -49,15 +50,51 @@
                     <div class="dropdown">
                         <a class="dropbtn" href="">services<i class="ri-arrow-down-s-line"></i></a>
                         <div class="dropdown-content">
-                            <a href="">Children</a>
-                            <a href="#">Adolescents</a>
-                            <a href="">Adults</a>
-                            <a href="">Senior Citizens</a>
-                            <a href="#">Family</a>
-                            <a href="#">Couples</a>
-                            <a href="">Psychiatrist Consulation</a>
+                          {% if current_page == 'children' %}
+                            <span class="home">Children</span>
+                          {% else %}
+                            <a href="{% url 'services_children' %}">Children</a>
+                          {% endif %}
+                          {% if current_page == 'adolescents' %}
+                            <span class="home">Adolescents</span>
+                          {% else %}
+                            <a href="{% url 'services_adolescents' %}">Adolescents</a>
+                          {% endif %}
+                          {% if current_page == 'adults' %}
+                            <span class="home">Adults</span>
+                          {% else %}
+                            <a href="{% url 'services_adults' %}">Adults</a>
+                          {% endif %}
+                          {% if current_page == 'senior_citizens' %}
+                            <span class="home">Senior Citizens</span>
+                          {% else %}
+                            <a href="{% url 'services_senior_citizens' %}">Senior Citizens</a>
+                          {% endif %}
+                          {% if current_page == 'familly' %}
+                            <span class="home">Family</span>
+                          {% else %}
+                            <a href="{% url 'services_family' %}">Family</a>
+                          {% endif %}
+                          {% if current_page == 'couples' %}
+                            <span class="home">Couples</span>
+                          {% else %}
+                            <a href="{% url 'services_couples' %}">Couples</a>
+                          {% endif %}
+                          {% if current_page == 'consultation' %}
+                            <span class="home">Psychiatrist Consultation</span>
+                          {% else %}
+                            <a href="{% url 'services_psychiatric_consultation' %}">Psychiatrist Consulation</a>
+                          {% endif %}
+                          {% if current_page == 'schools' %}
+                            <span class="home">Schools</span>
+                          {% else %}
                             <a href="#">Schools</a>
+                          {% endif %}
+                          {% if current_page == 'organizations' %}
+                            <span class="home">Organizations</span>
+                          {% else %}
                             <a href="#">Organizations</a>
+                          {% endif %}
                         </div>
                     </div>
                     {% if current_page == 'contact' %}

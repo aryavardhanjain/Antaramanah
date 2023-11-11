@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h3 class="section-heading">Psychiatric Consulation</h3>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CONSULTATION/medicines2.webp' %}" alt="..." width="450" height="800" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-body"><p class="text-muted">1. <strong>Comprehensive Assessment:</strong> Our psychiatric consultations include a thorough evaluation of your mental health, allowing our experienced professionals to accurately diagnose and understand the root causes of your challenges. This comprehensive assessment ensures a tailored treatment plan that addresses your unique needs. <br>
+
+                        2. <strong>Medication Management:</strong> Our psychiatric services integrate evidence-based medication management strategies to complement psychotherapy. Prescribing the right medications, when necessary, can significantly alleviate symptoms and enhance the effectiveness of psychotherapeutic interventions, offering a holistic approach to mental health treatment. <br>
+                        
+                        3. <strong>Collaborative Care:</strong> We believe in a collaborative approach where our psychiatrists work closely with our psychotherapists to provide integrated care. This synergy ensures that both medication and psychotherapy strategies align, offering you a cohesive and effective treatment plan. <br>
+                        
+                        4. <strong>Personalized Treatment Plans:</strong> Every individual is unique, and so are their mental health needs. Our psychiatric consultations prioritize personalized treatment plans that consider your specific symptoms, medical history, and lifestyle, maximizing the effectiveness of interventions tailored to your well-being. <br>
+                        
+                        5. <strong>Education and Empowerment:</strong> Our psychiatrists not only prescribe medications but also take the time to educate and empower you. Understanding the purpose and effects of medications fosters active participation in your treatment journey, promoting a sense of control and confidence in the overall healing process.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}

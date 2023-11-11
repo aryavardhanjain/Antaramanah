@@ -53,7 +53,6 @@ html,body{
       text-transform: capitalize;
       font-size: 1.2vw;
       display: flex;
-      gap: 3;
       position: relative;
       padding: 0px 20px 5px 20px;
       padding-bottom: 5px;
@@ -130,6 +129,7 @@ html,body{
     overflow: hidden; /* Hide any overflowing content */
     border-radius: 10px;
     padding: 10px 0;
+    width: 300px;
 }
 
 .dropdown-content a{
@@ -137,6 +137,7 @@ html,body{
     padding: 22px 16px;
     text-decoration: none;
     display: block;
+    margin: 10px;
 }
 
 .dropdown-content a:hover{
@@ -307,14 +308,21 @@ a {
     font-weight: 200;
 }
 
-.slider {
+.slider, .slider-1 {
     position: relative;
-    width: 960px;
     height: 300px;
     margin: 50px auto;
     box-shadow: 20px 20px 8px 0 rgba(0, 0, 0, 0.14), 4px 6px 20px 0 rgba(0, 0, 0, 0.12),
       4px 6px 20px -2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+  }
+
+  .slider{
+    width: 960px;
+  }
+
+  .slider-1{
+    width: 640px;
   }
   
   .slider-controls {
@@ -351,31 +359,31 @@ a {
   }
   
   #btn-1:checked ~ .slider-controls label[for="btn-1"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
   
   #btn-2:checked ~ .slider-controls label[for="btn-2"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
   
   #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
 
   #btn-4:checked ~ .slider-controls label[for="btn-4"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
 
   #btn-5:checked ~ .slider-controls label[for="btn-5"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
 
   #btn-6:checked ~ .slider-controls label[for="btn-6"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
 
   #btn-7:checked ~ .slider-controls label[for="btn-7"] {
-    background-color: #ff4081;
+    background-color: #e10de1;
   }
   
   /* SLIDES */
@@ -398,11 +406,25 @@ a {
     opacity: 0;
     transform: translatex(-100%);
     transition: transform 250ms linear;
+    background-color: white;
   }
   
   .slide-content {
     width: 65%;
     text-align: justify;
+  }
+
+  .slide-content-1 {
+    width: 32%;
+    text-align: left;
+    margin-right: 10%;
+  }
+
+  .slide-content-2 {
+    width: 32%;
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 10%;
   }
 
   .slide-text{

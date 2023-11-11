@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif;">Issues your child might be facing...</h2>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CHILDREN/crying.webp' %}" alt="..." width="300" height="400" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Mood Swings</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've noticed your child displaying sudden, intense irritability, frequent crying spells, and unexplained mood swings, it can be concerning. These signs may seem puzzling, but they could be signals of something deeper. Your child might be struggling with overwhelming emotions, and it's crucial to offer them support. Our team of experienced psychotherapists is here to help both your child and your family navigate through these challenging times. Our compassionate approach focuses on understanding and addressing these emotional challenges. Don't wait for things to worsen. Book a session with us today, and let's work together to bring harmony back to your child's life.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CHILDREN/distracted.webp' %}" alt="..." width="420" height="350" style="left: 8%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Is your child always on the move?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As a parent, you may notice certain signs and behaviors in your child that indicate they might be experiencing heightened physical and motor activity. Your little one might display an intense need for constant movement, often fidgeting or restlessly tapping their feet. They may struggle to sit still, finding it challenging to focus on one task at a time. You might observe a tendency for impulsive actions, like interrupting conversations or difficulty waiting their turn. These behaviors can be perplexing, but remember, understanding and seeking guidance from healthcare professionals can help you support your child's unique needs and development.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CHILDREN/nottalk.webp' %}" alt="..." width="300" height="400" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Is your child easily distracted?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As a parent, you may notice certain indicators in your child's behavior. Perhaps you've observed persistent difficulties in sustaining focus, finishing tasks, or following through with instructions. These telltale signs could include restlessness, frequent daydreaming, or impulsivity, often resulting in challenges at school or in daily life. Moreover, you might notice your child struggling with organization or time management, leading to missed deadlines or forgetfulness. These subtle cues might suggest that seeking professional guidance could help unveil strategies to support your child's unique needs, ultimately nurturing their potential and well-being.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CHILDREN/sad.webp' %}" alt="..." width="450" height="350" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Is your child intelligent but unable to perform well at school?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As a caring parent, you might notice certain clues in your child's learning journey. You may observe that they struggle with reading, finding it challenging to connect letters into words or comprehend texts. Sometimes, they might have difficulty following instructions or organizing their thoughts. In mathematics, they might find it hard to grasp basic concepts. Perhaps, you've noticed persistent problems with their handwriting or difficulty with coordination. These signs could indicate that your child might benefit from additional support. It's essential to pay attention to these subtle cues, as early intervention can make a significant difference in your child's educational path.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/CHILDREN/withdrawn.webp' %}" alt="..." width="420" height="350" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Difficulty in socializing</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've observed your child struggling with social withdrawal, difficulty in communicating, and finding it hard to engage with other children, it can be a worrisome challenge. These signs can make your child's world seem isolated and frustrating. It's essential to understand that there is help available. Our team of dedicated psychotherapists specializes in working with adolescents facing these issues. We offer a safe and supportive environment for your child to develop social skills, build connections, and express themselves more effectively. Don't let these concerns hinder their growth and happiness. Book a session with us today, and let's create a brighter future together.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}

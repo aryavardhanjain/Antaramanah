@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif;">Issues you might be facing...</h2>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/body_image.webp' %}" alt="..." width="350" height="400" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Body image issues</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've been struggling with negative thoughts about your appearance, constant comparisons to others, or feeling uncomfortable in your own skin, you're not alone. These feelings can create a heavy burden, affecting your self-esteem and overall well-being. It's important to remember that help is available. Our team of understanding psychotherapists is here to provide a safe space for you to explore these concerns. We'll work together to boost your self-confidence, develop a healthier self-image, and equip you with strategies to face the world with newfound self-assurance. Don't let these thoughts hold you back; book a session with us and start your journey towards a more positive self-image today.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/substance_use.webp' %}" alt="..." width="370" height="450" style="left: 10%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Dealing with addiction?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've noticed that you or someone you know has been frequently using substances like weed, alcohol, cocaine, heroin, or hashish, and it's starting to take a toll on your life, it's time to pay attention. Common signs include increased tolerance, withdrawal symptoms, neglecting responsibilities, and strained relationships. These substances can deceive you into thinking they're your escape, but they may be leading you down a risky path. Our compassionate psychotherapists are here to provide a safe, non-judgmental space where you can address your concerns, regain control, and build a healthier future. Don't let substances dictate your life; book a session with us today to find your way back to a brighter, healthier tomorrow.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/insomnia.webp' %}" alt="..." width="350" height="450" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Trouble Sleeping?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself tossing and turning night after night, unable to catch a good night's sleep, or relying on caffeine or other substances to stay awake during the day, you're not alone. These sleep disruptions can leave you feeling exhausted, irritable, and unable to concentrate on your daily activities. It's time to take control of your sleep patterns and overall well-being. Our team of caring psychotherapists specializes in helping teenagers like you overcome these challenges and develop healthy sleep habits. Don't let sleep troubles get in the way of your potential. Book a session with us today, and let's work on restoring your restful nights and energized days.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/breakdown.webp' %}" alt="..." width="450" height="500" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Difficulty concentrating? <br> You might be on the spectrum of Neurodivergence....</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As a teenager, you might sometimes find it challenging to stay focused, complete tasks, or even listen to instructions. There could be moments when your mind constantly races, making it hard to follow through with your goals. You might feel like you're always on the go, making impulsive decisions without thinking. Sometimes, it's a struggle to keep track of responsibilities or pay attention in conversations. If these descriptions resonate with your experiences, remember that it's okay to seek support. Many adults face similar challenges and find ways to overcome them with guidance. Reach out to professionals who can help you navigate these issues and discover effective strategies for a more fulfilling life.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/mobile_addiction.jpg' %}" alt="..." width="300" height="350" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Addicted to your phone?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself constantly glued to your phone, losing track of time, and neglecting other activities, it might be time to reflect on your habits. Do you often feel irritable or anxious when your phone is out of reach? Is it affecting your relationships and schoolwork? These signs could indicate that your phone usage is becoming a problem. Remember, you're not alone in this struggle, and there are ways to regain control and find a healthier balance. Consider taking a step back from your screen and reconnecting with the world around you. It's your life, and you have the power to make positive changes.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADOLESCENTS/self_harm.webp' %}" alt="..." width="450" height="300" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Are you hurting yourself ?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself struggling with overwhelming emotions, there are signs that you may be using self-destructive coping mechanisms. You might notice unexplained cuts, burns, or bruises on your body that you can't account for. These actions can provide a temporary relief, but in the long run, they can harm you both physically and emotionally. It's vital to understand that there are healthier ways to deal with your pain and stress. You don't have to go through this alone. Reach out to someone you trust, a friend, family member, or a mental health professional who can help you find more constructive ways to handle your emotions and heal. Your well-being matters.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}

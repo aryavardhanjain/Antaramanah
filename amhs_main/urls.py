@@ -25,4 +25,11 @@ urlpatterns = [
     path('about/mission_vision', views.mission_vision, name='mission_vision'),
     path('contact', views.contact, name='contact'),
     path('faq', views.faq, name='faq'),
+    path('services/children', views.services_children, name='services_children'),
+    path('services/adolescents', views.services_adolescents, name='services_adolescents'),
+    path('services/adults', views.services_adults, name='services_adults'),
+    path('services/senior_citizens', views.services_senior_citizens, name='services_senior_citizens'),
+    path('services/family', views.services_family, name='services_family'),
+    path('services/couples', views.services_couples, name='services_couples'),
+    path('services/consultation', views.services_psychiatric_consultation, name='services_psychiatric_consultation'),
 ]

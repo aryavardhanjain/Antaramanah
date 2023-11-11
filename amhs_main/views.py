@@ -31,3 +31,45 @@ def faq(request):
         'current_page': 'faq',
     }
     return render(request, 'faq.html', context)
+
+def services_children(request):
+    context = {
+        'current_page': 'children',
+    }
+    return render(request, 'children.html', context)
+
+def services_adolescents(request):
+    context = {
+        'current_page': 'adolescents',
+    }
+    return render(request, 'adolescents.html', context)
+
+def services_adults(request):
+    context = {
+        'current_page': 'adults',
+    }
+    return render(request, 'adults.html', context)
+
+def services_senior_citizens(request):
+    context = {
+        'current_page': 'senior_citizens',
+    }
+    return render(request, 'senior_citizens.html', context)
+
+def services_family(request):
+    context = {
+        'current_page': 'family',
+    }
+    return render(request, 'family.html', context)
+
+def services_couples(request):
+    context = {
+        'current_page': 'couples',
+    }
+    return render(request, 'couples.html', context)
+
+def services_psychiatric_consultation(request):
+    context = {
+        'current_page': 'consultation',
+    }
+    return render(request, 'consultation.html', context)

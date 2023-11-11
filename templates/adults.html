@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif;">Issues you might be facing...</h2>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/depression.webp' %}" alt="..." width="350" height="400" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Depression</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself overwhelmed by an unshakable weight, constantly fatigued, and disinterested in once-enjoyed activities, it might be more than just a phase. The persistent feeling of sadness, changes in sleep and appetite patterns, and difficulty concentrating can all be telling signs. These emotional battles can be incredibly challenging, but you don't have to face them alone. Our dedicated team of psychotherapists is here to help you regain your zest for life. Reach out today and let us provide the support and guidance you need to find your way back to happiness and emotional well-being. You deserve to feel better.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/addiction.webp' %}" alt="..." width="370" height="450" style="left: 10%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Dealing with addiction?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've noticed that you or someone you know has been frequently using substances like weed, alcohol, cocaine, heroin, or hashish, and it's starting to take a toll on your life, it's time to pay attention. Common signs include increased tolerance, withdrawal symptoms, neglecting responsibilities, and strained relationships. These substances can deceive you into thinking they're your escape, but they may be leading you down a risky path. Our compassionate psychotherapists are here to provide a safe, non-judgmental space where you can address your concerns, regain control, and build a healthier future. Don't let substances dictate your life; book a session with us today to find your way back to a brighter, healthier tomorrow.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/insomnia.webp' %}" alt="..." width="400" height="320" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Trouble Sleeping?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself tossing and turning night after night, unable to catch a good night's sleep, or relying on caffeine or other substances to stay awake during the day, you're not alone. These sleep disruptions can leave you feeling exhausted, irritable, and unable to concentrate on your daily activities. It's time to take control of your sleep patterns and overall well-being. Our team of caring psychotherapists specializes in helping teenagers like you overcome these challenges and develop healthy sleep habits. Don't let sleep troubles get in the way of your potential. Book a session with us today, and let's work on restoring your restful nights and energized days.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/anxiety.webp' %}" alt="..." width="450" height="500" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Anxiety</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself plagued by racing thoughts, your heart pounding uncontrollably, and an overwhelming sense of fear or impending doom, you're not alone. Sweating, trembling, and struggling to catch your breath are all too familiar. These are more than just fleeting moments of unease; they can consume your daily life. But remember, you don't have to face this on your own. Our team of dedicated psychotherapists specializes in helping individuals like you regain control over their lives. Reach out today, and let us guide you toward a path of relief, understanding, and peace. You deserve to live free from the grip of these relentless symptoms.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/mobile_addiction.webp' %}" alt="..." width="450" height="350" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Addicted to your phone?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself constantly glued to your phone, losing track of time, and neglecting other activities, it might be time to reflect on your habits. Do you often feel irritable or anxious when your phone is out of reach? Is it affecting your relationships and daily life? These signs could indicate that your phone usage is becoming a problem. Remember, you're not alone in this struggle, and there are ways to regain control and find a healthier balance. Consider taking a step back from your screen and reconnecting with the world around you. It's your life, and you have the power to make positive changes.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/sex.webp' %}" alt="..." width="450" height="350" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Experiencing problems of sexual nature?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself experiencing persistent dissatisfaction and disinterest in sexual activities, it can be disheartening. You might notice a decline in your libido, making it challenging to connect intimately with your partner. These issues may manifest as difficulties with arousal or maintaining sexual function. If these signs and symptoms persist, it's essential to seek guidance and support from a healthcare professional. Your overall well-being and relationship happiness are important, and addressing these concerns can lead to a more fulfilling and satisfying sexual life. Don't hesitate to reach out for assistance in understanding and resolving these issues.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/queer.webp' %}" alt="..." width="450" height="350" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Queer affirmative services</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you find yourself experiencing a persistent sense of discomfort with your assigned gender, it can manifest in various ways, such as emotional distress, body dissatisfaction, or confusion about your sexual orientation. These feelings might create a significant impact on your daily life, relationships, and overall well-being. It's important to remember that you don't have to navigate this journey alone. Our compassionate psychotherapists specialize in helping individuals understand and embrace their true selves. You deserve support, guidance, and a safe space to explore your identity. Don't hesitate to reach out and book a session with us – your path to self-discovery and acceptance begins here.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted"> 
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/ocd.webp' %}" alt="..." width="450" height="350" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Just overthinking or obsessive thinking??</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you often find yourself trapped in repetitive thoughts, compelled to perform certain rituals, or consumed by irrational fears about your health, you're not alone. These patterns might manifest as an endless cycle of intrusive thoughts, relentless checking, or an overwhelming preoccupation with physical symptoms. Overthinking and excessive worry can dominate your mind, impacting your daily life. Recognizing these signs is the first step to seeking support. It's time to regain control over your thoughts and alleviate the anxiety that's been holding you captive. Reach out to a mental health professional who can help you find the peace of mind you deserve.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/social_phobia.webp' %}" alt="..." width="400" height="450" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Social Anxiety</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You've probably noticed an overwhelming fear of social situations, which might lead to avoiding gatherings, public places, or any situation that could draw attention. These persistent feelings of self-consciousness may cause physical symptoms like sweating, trembling, or an increased heart rate, making even the thought of stepping outside seem daunting. It's common to experience extreme discomfort when speaking in public or engaging with strangers, leading to an isolated and restricted lifestyle. If these symptoms resonate with you or someone you care about, it might be time to reach out for professional help. Don't let this fear control your life; there is support available to guide you toward a brighter future.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded" src="{% static 'images/ADULTS/workplace_stress.webp' %}" alt="..." width="450" height="350" style="left: 6%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Are your goals at work being hampered?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">If you've been experiencing overwhelming workplace stress, it may manifest in various ways. You might notice signs like sleepless nights, constant worry, or irritability. It's not uncommon to face issues in your professional environment, such as conflicts or excessive workload. Additionally, struggles with assertiveness can hinder effective communication, making it harder to express your needs. Procrastination might become a frequent challenge, leaving tasks unfinished. Improving time management can alleviate some of these burdens. Remember, recognizing these symptoms is the first step to a healthier work-life balance. Seek support and strategies to regain control and well-being in your professional life.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}

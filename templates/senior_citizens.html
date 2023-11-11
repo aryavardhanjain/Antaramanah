@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif;">Issues you might be facing...</h2>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/OLD AGE/retirement_blues.webp' %}" alt="..." width="400" height="300" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Retirement blues?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">As you enter your golden years, you might find yourself experiencing a range of emotions and physical sensations that can leave you feeling overwhelmed. It's not uncommon to notice changes in your sleep patterns, appetite, and energy levels. Perhaps you've started to withdraw from activities you once enjoyed or feel a persistent sense of restlessness and sadness. These are all signs that many seniors face, and it's essential to remember that help is available. Our team of compassionate psychotherapists specializes in providing support for seniors like you. We understand the unique challenges you're going through and can offer guidance to help you regain a sense of purpose and happiness. Don't hesitate to reach out and book a session with us; you deserve to enjoy your retirement to the fullest.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/OLD AGE/abandonment.webp' %}" alt="..." width="370" height="450" style="left: 10%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Loneliness?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You've been feeling a profound sense of isolation lately, as the once vibrant connections with your family and children seem to have faded into mere memories. Loneliness and abandonment have become constant companions in your late life. You find yourself questioning the meaning of this stage, overwhelmed by a sense of loss and confusion. The weight of unresolved issues, coupled with a longing for emotional support, has taken a toll on your well-being. Our dedicated psychotherapists understand what you're going through and can provide a safe space to help you navigate these complex emotions. Reach out to us today, and let's work together to rebuild the meaningful connections you deserve.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/OLD AGE/memory.webp' %}" alt="..." width="400" height="320" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Experiencing gaps in your memory?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You've noticed moments of confusion, like forgetting important dates or names. Your once-vibrant memories now seem elusive, leaving you frustrated and anxious. These memory lapses can strain your relationships and hinder your independence. Don't let these challenges define your golden years. Our dedicated psychotherapists specialize in providing personalized support to help you regain mental clarity and lead a fulfilling life. Take the first step towards a brighter future by booking a session with us. We understand what you're going through, and together, we can work towards improving your cognitive well-being and restoring the joy in your daily life.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}

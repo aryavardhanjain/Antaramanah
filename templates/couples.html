@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+{% endblock %}
+
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif;">Issues you might be facing...</h2>
+        </div>
+        <br><br><br>
+        <ul class="timeline" style="font-family: 'Montserrat', sans-serif;">
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/RELATIONSHIP/couple3.webp' %}" alt="..." width="450" height="320" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Communication gap?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You may have noticed some common signs of boundary issues in your relationship, like frequent misunderstandings and arguments over personal space or time. Feelings of suffocation or insecurity could be creeping in. It might be a struggle to balance your individuality with togetherness, leading to emotional strain. If you find yourselves unable to express your needs or maintain a healthy level of trust, it's time to consider professional help. Our experienced psychotherapists can provide guidance and support to navigate these challenges, improving communication and strengthening your connection. Book a session today to regain harmony and rediscover the joy of being together.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/RELATIONSHIP/couple4.webp' %}" alt="..." width="400" height="320" style="left: 10%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Violence in your relationship?</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You and your partner may have noticed a growing tension, where every conversation turns into a battlefield, marked by raised voices and hurtful words. Perhaps you've experienced physical aggression or an unsettling emotional distance between you two. These signs, such as constant arguing, clenched fists, or the silent treatment, are difficult to bear. But it doesn't have to be this way. Our psychotherapists specialize in nurturing healthy communication and resolving conflicts. They can help you both regain the love and understanding you once shared. Don't let hostility and violence define your relationship – take the first step towards healing today.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/RELATIONSHIP/couple2.webp' %}" alt="..." width="400" height="470" style="left: 20%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Cultural differences</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You've noticed that in your relationship, subtle differences in culture have started to cause misunderstandings. While your partner's traditions and values may be beautiful, you've found that these disparities sometimes lead to tension and miscommunication. You may experience frustration, confusion, and even isolation due to these cultural gaps. Our experienced psychotherapists understand the complexities of cross-cultural relationships and can help you both navigate these challenges. They can provide a safe space for open dialogue, effective strategies for better communication, and guidance in embracing the richness of your unique cultural backgrounds, ultimately strengthening your bond. Don't let cultural differences drive a wedge between you and your partner; book a session with our expert therapists today to build a stronger, more harmonious connection.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"></div>
+                <img class="rounded float-right" src="{% static 'images/RELATIONSHIP/couple1.webp' %}" alt="..." width="400" height="430" style="left: 10%; position: relative;" />
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Queer couple</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">You and your partner may sometimes find yourselves caught in heated arguments or facing unique challenges that come with being a homosexual queer couple. These issues can manifest as increased tension, communication breakdowns, or feelings of isolation. Dealing with societal prejudices, family dynamics, and personal struggles can be overwhelming. Our dedicated psychotherapists understand the intricacies of your situation and offer a safe, judgment-free space to help you both navigate these challenges. Whether you seek support for strengthening your relationship, resolving conflicts, or coping with external pressures, our therapists can provide valuable guidance to help you thrive as a couple. Schedule a session today and take the first step toward a healthier, happier relationship.</p></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Team-->
+
+{% endblock %}
