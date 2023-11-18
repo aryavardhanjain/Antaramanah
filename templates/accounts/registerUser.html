@@ -14,11 +14,15 @@
         width: 70% !important;
         height: auto !important;
         font-family: 'Montserrat', sans-serif !important;
-        box-shadow: 5px 10px 8px 5px !important;
+        filter: drop-shadow(10px 10px 10px rgb(185, 184, 184));
     }
     
     .rounded {
         border-radius: 20px !important;
+    }
+
+    .btn-outline-primary {
+      background-color: #23246c !important;
     }
 
 </style>
@@ -63,17 +67,20 @@
                   <label for="confirm_password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
                   {{ form.confirm_password }}
                 </div>
+                <ul class="errorlist">
+                  {% for field in form %}
+                    {% if field.errors %}
+                      {% for error in field.errors %}
+                        <li style="color: red;">{{ error }}</li>
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  <li style="color: red;">{{ form.non_field_errors }}</li>
+                </ul>
                 <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me">
-                    <label class="form-check-label text-secondary" for="remember_me">
-                      Keep me logged in
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="d-grid">
-                    <button class="bsb-btn-xl shadow__btn" style="margin-left: 70px !important;" type="submit">Sign Up</button>
+                  <div class="d-flex justify-content-center">
+                    <button class="bsb-btn-xl shadow__btn" type="submit">Sign Up</button>
                   </div>
                 </div>
               </div>
@@ -81,20 +88,17 @@
             <div class="row">
               <div class="col-12">
                 <hr class="mt-5 mb-4 border-secondary-subtle">
-                <div class="text-end">
-                  <a href="#!" class="link-secondary text-decoration-none">Forgot password</a>
-                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <p class="mt-5 mb-4">Or sign in with</p>
-                <div class="d-flex gap-3 flex-column flex-xl-row">
+                <p class="mt-3 mb-4 text-center">Or sign in with</p>
+                <div class="d-flex justify-content-center gap-3 flex-column flex-xl-row">
                   <a href="#!" class="btn bsb-btn-xl btn-outline-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
                       <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
                     </svg>
-                    <span class="ms-2 fs-6">Google</span>
+                    <span style="color: white;" class="ms-2 fs-6">Login with Google</span>
                   </a>
                 </div>
               </div>

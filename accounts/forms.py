@@ -15,7 +15,7 @@ class CustomPhoneNumberWidget(PhoneNumberPrefixWidget):
 
 class UserForm(forms.ModelForm):
     phone_number = PhoneNumberField(
-        widget=CustomPhoneNumberWidget(attrs={'style': 'width: 50%; margin-right: 5px;'}),
+        widget=CustomPhoneNumberWidget(attrs={'style': 'width: 50%; margin-right: 5px;'}, initial='IN'),
     )
 
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
@@ -32,3 +32,11 @@ class UserForm(forms.ModelForm):
             field = self.fields.get(field_name)
             if field and isinstance(field.widget, (forms.TextInput, forms.EmailInput)):
                 field.widget = CustomTextInput()
+
+    def clean(self):
+        cleaned_data = super(UserForm, self).clean()
+        password = cleaned_data.get('password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        if password != confirm_password:
+            raise forms.ValidationError('Passwords must match!')
