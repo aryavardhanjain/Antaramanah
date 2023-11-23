@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'therapist',
     'phonenumber_field',
     'accounts',
     'django.contrib.admin',
@@ -136,3 +137,16 @@ MEDIA_ROOT = BASE_DIR /'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 7
+
+AUTHENTICATION_BACKENDS = [
+    'therapist.backends.AMHSIDBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    ]

@@ -535,6 +535,7 @@ a {
   }
 
   .footer {
+    margin-top: 70px;
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
@@ -1004,3 +1005,5 @@ transform: rotateY(180deg);
   font-size: 22px;
   line-height: 1.6;
 }
+
+

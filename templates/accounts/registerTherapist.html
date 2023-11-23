@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.2/components/logins/login-3/assets/css/login-3.css">
 <link rel="stylesheet" href="{% static 'css/animation.css' %}">
+
 {% endblock %}
 
 <style>
@@ -40,18 +41,18 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-5">
-                  <h3 style="text-align: center; font-weight: bold;">Register</h3>
+                  <h3 style="text-align: center; font-weight: bold;">Therapist Registration</h3>
                 </div>
               </div>
             </div>
-            <form action="{% url 'registerUser' %}" method="POST">
+            <form action="{% url 'registerTherapist' %}" method="POST">
               {% csrf_token %}
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
-                  <label for="first_name" class="form-label">First name <span class="text-danger">*</span></label>{{ form.first_name }}
+                    <label for="first_name" class="form-label">First name <span class="text-danger">*</span></label>{{ form.first_name }}
                 </div>
                 <div class="col-12">
-                    <label for="last_name" class="form-label">Last name <span class="text-danger">*</span></label>{{ form.last_name }}
+                  <label for="last_name" class="form-label">Last name <span class="text-danger">*</span></label>{{ form.last_name }}
                 </div>
                 <div class="col-12">
                     <label for="username" class="form-label">Username <span class="text-danger">*</span></label>{{ form.username }}
@@ -86,13 +87,6 @@
                     <button class="bsb-btn-xl shadow__btn mt-2" type="submit">Sign Up</button>
                   </div>
                 </div>
-                <div class="row" style="margin-top: 20px !important;">
-                  <div class="col-12">
-                    <div class="text">
-                      <a href="{% url 'registerTherapist' %}" class="link-secondary text-decoration-underline mt-2">Therapist?</a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </form>
           </div>
@@ -100,7 +94,6 @@
       </div>
     </div>
   </section>
-  
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       {% if messages %}
